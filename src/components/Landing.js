@@ -1,5 +1,6 @@
 import logo from '../d20-blank.svg';
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Landing = () => {
   return (
@@ -8,13 +9,12 @@ const Landing = () => {
       <p>
         Role Dice. Battle Evil.
       </p>
-      <a
+      <Link
         className="App-link"
-        href="/arena"
-        rel="noopener noreferrer"
+        to="/arena"
       >
         Fight Monsters!
-      </a>
+      </Link>
     </header>
   );
 };
