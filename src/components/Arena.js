@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 
 import { selectMonster } from '../actions';
 import Monster from './Monster';
+import Player from './Player';
 
 class Arena extends React.Component {
   componentDidMount() {
@@ -19,6 +20,7 @@ class Arena extends React.Component {
       <div>
         <h2>Arena</h2>
         <Monster monster={this.props.currentMonster} />
+        <Player player={this.props.player} />
       </div>
     );
   }
@@ -27,7 +29,8 @@ class Arena extends React.Component {
 const mapStateToProps = (state) => {
   return {
     monsters: state.monsters,
-    currentMonster: state.currentMonster
+    currentMonster: state.currentMonster,
+    player: state.player
   };
 }
 

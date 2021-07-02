@@ -1,21 +1,10 @@
 import { combineReducers } from 'redux';
 
-import monsterList from '../utilities/monsters';
-
-const monstersReducer = (monsters=monsterList, action) => {
-  return monsters;
-};
-
-const selectMonsterReducer = (selectedMonster=null, action) => {
-  switch (action.type) {
-    case 'SELECT_MONSTER': 
-      return action.payload;
-    default:
-      return selectedMonster;
-  }
-};
+import { monstersReducer, selectMonsterReducer } from './monstersReducer';
+import { playerReducer } from './playerReducer';
 
 export default combineReducers({
   monsters: monstersReducer,
-  currentMonster: selectMonsterReducer
+  currentMonster: selectMonsterReducer,
+  player: playerReducer
 });
