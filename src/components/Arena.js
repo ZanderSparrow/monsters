@@ -1,14 +1,18 @@
 import React from 'react';
 import { connect } from 'react-redux';
 
-import { selectRandomMonster } from '../actions';
+import { selectMonster } from '../actions';
 import Monster from './Monster';
 
 class Arena extends React.Component {
   componentDidMount() {
     console.log(this.props);
-    this.props.selectRandomMonster(this.props.monsters);
-  }
+    const { monsters } = this.props; 
+    
+    this.props.selectMonster(monsters[Math.floor(Math.random()*monsters.length)]);
+
+    }
+    
 
   render() {
     return (
@@ -27,4 +31,4 @@ const mapStateToProps = (state) => {
   };
 }
 
-export default connect(mapStateToProps, {selectRandomMonster})(Arena);
+export default connect(mapStateToProps, {selectMonster})(Arena);

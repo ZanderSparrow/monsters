@@ -10,8 +10,6 @@ const selectMonsterReducer = (selectedMonster=null, action) => {
   switch (action.type) {
     case 'SELECT_MONSTER': 
       return action.payload;
-    case 'SELECT_RANDOM_MONSTER':
-      return action.payload;
     default:
       return selectedMonster;
   }

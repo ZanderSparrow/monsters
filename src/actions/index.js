@@ -1,8 +1,8 @@
 // Monster actions
-export const selectRandomMonster = (monsters) => {
+export const selectMonster = (monster) => {
   return {
-    type: 'SELECT_RANDOM_MONSTER',
-    payload: monsters[Math.floor(Math.random()*monsters.length)]
+    type: 'SELECT_MONSTER',
+    payload: monster
   }
 }
 
