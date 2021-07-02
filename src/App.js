@@ -5,7 +5,7 @@ import { BrowserRouter, Route } from 'react-router-dom';
 import Arena from './components/Arena';
 import Landing from './components/Landing';
 
-function App() {
+const App = () => {
   return (
     <div className="App">
       <BrowserRouter>
