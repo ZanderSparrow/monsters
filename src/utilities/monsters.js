@@ -19,7 +19,7 @@ const monsters = [
   },
   {
     name: 'Straight Line',
-    description: 'Bursting with loathing for bent things';
+    description: 'Bursting with loathing for bent things',
     hitMod: 5,
     HP: 12
   },
