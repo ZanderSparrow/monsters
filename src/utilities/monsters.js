@@ -16,7 +16,20 @@ const monsters = [
     description: 'It has arms but it should not',
     hitMod: 2,
     HP: 15
+  },
+  {
+    name: 'Straight Line',
+    description: 'Bursting with loathing for bent things';
+    hitMod: 5,
+    HP: 12
+  },
+  {
+    name: 'Stone Jester',
+    description: 'Was only joking',
+    hotMod: 4,
+    HP: 300
   }
+
 ];
 
 export default monsters;
